@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Timepiece - Premium Wristwatch</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .image-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .product-image:hover {
+            transform: scale(1.05);
+        }
+
+        .content-section {
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .product-description {
+            font-size: 18px;
+            color: #4a5568;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .features {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .features li {
+            padding: 10px 0;
+            color: #2d3748;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .features li:before {
+            content: "✓";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        .price {
+            font-size: 36px;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 30px;
+        }
+
+        .price span {
+            font-size: 20px;
+            color: #718096;
+            text-decoration: line-through;
+            margin-left: 10px;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 18px 50px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.6);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+
+        .trust-badges {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #4a5568;
+            font-size: 14px;
+        }
+
+        .trust-badge svg {
+            width: 24px;
+            height: 24px;
+            fill: #667eea;
+        }
+
+        /* Adobe Target specific classes for testing */
+        .target-content {
+            transition: all 0.3s ease;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .image-section {
+                padding: 40px;
+            }
+
+            .content-section {
+                padding: 40px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .price {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            .content-section {
+                padding: 30px;
+            }
+
+            .trust-badges {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        /* Loading state for Adobe Target */
+        .at-loading {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-section">
+            <!-- Using a high-quality wristwatch image from a reliable CDN -->
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&h=800&fit=crop&q=80" 
+                 alt="Luxury Wristwatch" 
+                 class="product-image"
+                 id="productImage">
+        </div>
+
+        <div class="content-section target-content">
+            <div class="badge" id="badge">Limited Edition</div>
+            
+            <h1 id="productName">Chronos Elite</h1>
+            
+            <p class="product-description" id="productDescription">
+                Experience the perfect blend of Swiss precision and contemporary design. 
+                This timepiece features a sapphire crystal face, automatic movement, and 
+                water resistance up to 100m. Crafted for the modern professional.
+            </p>
+
+            <ul class="features" id="features">
+                <li>Swiss Automatic Movement</li>
+                <li>Sapphire Crystal Glass</li>
+                <li>100m Water Resistant</li>
+                <li>316L Stainless Steel Case</li>
+                <li>2 Year International Warranty</li>
+            </ul>
+
+            <div class="price" id="price">
+                $899 <span>$1,299</span>
+            </div>
+
+            <button class="cta-button" id="ctaButton">
+                Buy Now
+            </button>
+
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                    </svg>
+                    <span>Secure Payment</span>
+                </div>
+                <div class="trust-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+                    </svg>
+                    <span>Free Shipping</span>
+                </div>
+                <div class="trust-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span>2 Year Warranty</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
