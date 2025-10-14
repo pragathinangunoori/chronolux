@@ -236,7 +236,28 @@
 </script>
     <!-- Adobe Target at.js integration  -->
 <script src="files/at.js"></script>
-<script src="files/rules.json"></script>
+<!-- <script src="files/rules.json"></script> -->
+  <script>
+    // Wait for the page to be ready (best practice!)
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('.files/rules.json') // Adjust path if rules.json is in a subfolder
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+          }
+          return response.json();
+        })
+        .then(data => {
+          // Do whatever you want with the loaded rules.json object:
+          console.log('Loaded rules.json:', data);
+          // Example: Access version: console.log(data.version);
+        })
+        .catch(error => {
+          console.error('Error loading rules.json:', error);
+        });
+    });
+  </script>
+    
 </head>
 <body>
     <div class="container">
