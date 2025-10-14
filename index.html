@@ -240,7 +240,7 @@
   <script>
     // Wait for the page to be ready (best practice!)
     document.addEventListener('DOMContentLoaded', function() {
-      fetch('.files/rules.json') // Adjust path if rules.json is in a subfolder
+      fetch('files/rules.json') // Adjust path if rules.json is in a subfolder
         .then(response => {
           if (!response.ok) {
             throw new Error('Network response was not ok ' + response.statusText);
